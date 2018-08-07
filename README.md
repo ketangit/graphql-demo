@@ -1,7 +1,7 @@
 # GraphQL demo projects
 
 ### Contains two demo projects showing GraphQL api
-
+```
 1. graphql-annotations-demo
     Using GraphQL Annotations library 
     https://github.com/graphql-java/graphql-java-annotations
@@ -9,6 +9,7 @@
 2. graphql-java-tools-demo
     Using GraphQL Java Tools library
     https://github.com/graphql-java/graphql-java-tools
+```
 
 ### Steps to run this project locally
 1. http://localhost:8080/graphiql
