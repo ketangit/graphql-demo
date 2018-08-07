@@ -24,7 +24,6 @@ public class Query implements GraphQLQueryResolver {
         return new ArrayList<>();
     }
 
-
     public SubDepartment subDepartment(int subDepartmentId) {
         return new SubDepartment();
     }
