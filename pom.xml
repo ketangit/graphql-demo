@@ -4,10 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.mycompany.demo</groupId>
     <artifactId>graphql-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>graphql-demo</name>
+    <packaging>pom</packaging>
 
     <modules>
-        <module>graphql-annotations</module>
+        <module>graphql-annotations-demo</module>
+        <module>graphql-java-tools-demo</module>
     </modules>
 </project>

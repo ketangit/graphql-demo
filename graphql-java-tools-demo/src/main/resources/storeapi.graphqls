@@ -1,0 +1,13 @@
+scalar LocalDateTime
+
+type Query {
+    department(departmentId: Int!): Department
+}
+
+type Department {
+    departmentId: Int!
+    lookupCode: String
+    name: String
+    markup: Float
+    dbTimeStamp: LocalDateTime
+}

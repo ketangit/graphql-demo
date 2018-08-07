@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: graphql-java-tools-demo
+  servlet:
+    multipart:
+      enabled: true
+      location: /tmp

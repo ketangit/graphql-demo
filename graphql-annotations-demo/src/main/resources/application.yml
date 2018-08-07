@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: graphql-annotations
+
+graphiql:
+  mapping: /graphiql
+  endpoint: /graphql
+  enabled: true
