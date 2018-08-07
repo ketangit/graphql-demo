@@ -14,7 +14,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Table(indexes = {@Index(name = "I_UpcCode_BarCode", columnList = "BarCode", unique = true)})
 @Entity
@@ -40,7 +40,7 @@ public class UpcCode {
 
     @Basic
     @Column(name = "DBTimeStamp")
-    private Timestamp dbTimeStamp;
+    private LocalDateTime dbTimeStamp;
 
     @NotNull
     @ManyToOne
@@ -71,11 +71,11 @@ public class UpcCode {
         this.barCode = barCode;
     }
 
-    public Timestamp getDbTimeStamp() {
+    public LocalDateTime getDbTimeStamp() {
         return dbTimeStamp;
     }
 
-    public void setDbTimeStamp(Timestamp dbTimeStamp) {
+    public void setDbTimeStamp(LocalDateTime dbTimeStamp) {
         this.dbTimeStamp = dbTimeStamp;
     }
 

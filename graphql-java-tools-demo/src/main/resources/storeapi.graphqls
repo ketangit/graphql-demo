@@ -2,6 +2,11 @@ scalar LocalDateTime
 
 type Query {
     department(departmentId: Int!): Department
+    subDepartment(subDepartmentId: Int!): SubDepartment
+    salesTaxGroup(salesTaxGroupId: Int!): SalesTaxGroup
+    departmentGroup(departmentGroupId: Int!): DepartmentGroup
+    sizeCodeDefinition(sizeCodeId: Int!): SizeCodeDefinition
+    upcCode(upcCodeId: Int!, itemId: Int!): UpcCode
 }
 
 type Department {
@@ -10,4 +15,42 @@ type Department {
     name: String
     markup: Float
     dbTimeStamp: LocalDateTime
+	departmentGroup: DepartmentGroup!
+	salesTaxGroup: SalesTaxGroup!
+}
+
+type SubDepartment {
+	subDepartmentId: Int!
+	name: String
+	lookupCode: String
+	dbTimeStamp: LocalDateTime
+	department: Department!
+}
+
+type SalesTaxGroup {
+	salesTaxGroupId: Int!
+	salesTaxGroupName: String
+	salesTaxGroupValue: Float
+}
+
+type DepartmentGroup {
+	departmentGroupId: Int!
+	departmentGroupName: String
+	departmentGroupDescription: String
+}
+
+type SizeCodeDefinition {
+	sizeCodeId: Int!
+	lookupCode: String
+	bottleSize: String
+	packPerCase: Int
+	unitPerCase: Int
+	dbTimeStamp: LocalDateTime
+}
+
+type UpcCode {
+	upcCodeId: Int!
+	itemId: Int!
+	barCode: String
+	dbTimeStamp: LocalDateTime
 }
