@@ -1,8 +1,12 @@
 package com.mycompany.demo.java.tools.domain;
 
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +22,7 @@ import java.time.LocalDateTime;
 
 @Table(indexes = {@Index(name = "I_Department_Name", columnList = "Name", unique = true)})
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 public class Department {
 
     @NotNull
@@ -45,6 +50,7 @@ public class Department {
     private Double markup;
 
     @Basic
+    @CreatedDate
     @Column(name = "DBTimeStamp")
     private LocalDateTime dbTimeStamp;
 
