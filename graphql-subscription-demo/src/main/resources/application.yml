@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: graphql-subscription-demo
+
+graphql:
+  servlet:
+    subscriptions:
+      websocket:
+        path: /subscriptions
+    tracingEnabled: true

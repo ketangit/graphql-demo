@@ -11,5 +11,6 @@
     <modules>
         <module>graphql-annotations-demo</module>
         <module>graphql-java-tools-demo</module>
+        <module>graphql-subscription-demo</module>
     </modules>
 </project>
