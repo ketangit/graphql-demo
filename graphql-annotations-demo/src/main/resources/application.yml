@@ -6,3 +6,7 @@ graphiql:
   mapping: /graphiql
   endpoint: /graphql
   enabled: true
+
+graphql.servlet.exception-handlers-enabled: true
+
+management.endpoints.web.exposure.include: health, info, metrics

@@ -6,11 +6,15 @@ spring:
       enabled: true
       location: /tmp
 
+management.endpoints.web.exposure.include: health, info, metrics
+
+graphql.servlet.exception-handlers-enabled: true
+
 # in-memory h2 datasource configuration
-  datasource:
+datasource:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:h2:mem:apidb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;INIT=CREATE SCHEMA IF NOT EXISTS apidb
-    driver-class-name: org.h2.Driver
+    driver-class-name: org.h2.DriverMetricsInstrumentation
     username: sa
     hikari:
       idle-timeout: 10000

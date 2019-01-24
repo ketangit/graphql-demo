@@ -8,3 +8,7 @@ graphql:
       websocket:
         path: /subscriptions
     tracingEnabled: true
+
+graphql.servlet.exception-handlers-enabled: true
+
+management.endpoints.web.exposure.include: health, info, metrics
