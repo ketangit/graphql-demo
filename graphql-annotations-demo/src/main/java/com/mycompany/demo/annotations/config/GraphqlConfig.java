@@ -14,9 +14,11 @@ public class GraphqlConfig {
 
     @Bean
     public GraphQLSchema graphQLSchema() {
+        GraphQLAnnotations graphqlAnnotations = new GraphQLAnnotations();
+
         return newSchema()
-                .query(GraphQLAnnotations.object(UserQuery.class))
-                .mutation(GraphQLAnnotations.object(UserMutation.class))
+                .query(graphqlAnnotations.object(UserQuery.class))
+                .mutation(graphqlAnnotations.object(UserMutation.class))
                 .build();
     }
 }

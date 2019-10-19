@@ -1,12 +1,7 @@
 spring:
   application:
     name: graphql-annotations
-
-graphiql:
-  mapping: /graphiql
-  endpoint: /graphql
-  enabled: true
-
-graphql.servlet.exception-handlers-enabled: true
+  main:
+    banner-mode: off
 
 management.endpoints.web.exposure.include: health, info, metrics
